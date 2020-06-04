@@ -45,6 +45,9 @@ export const resize = (rows: number, el: HTMLTextAreaElement | null): void => {
     el.style.height = '0'
     el.style.overflowY = 'hidden'
     el.style.height = `${getHeight(rows, el)}px`
+    el.style.overflowY = 'auto'
+    el.blur()
+    el.focus()
   }
 }
 
